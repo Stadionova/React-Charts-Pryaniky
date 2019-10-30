@@ -4,7 +4,7 @@ import Chart from "react-google-charts";
 import './index.css';
 import { data } from './modules/data.js';
 import './dataApi';
-import { getDataYear } from './dataApi';
+import { getDataYear, getDataMonth, getDataDay } from './dataApi';
 
 class App extends React.Component {
 
@@ -28,13 +28,13 @@ class App extends React.Component {
 
     changeDataChartMonth(event) {
         this.setState({
-            data: data.dataMonth
+            data: getDataMonth()
         });
     };
 
     changeDataChartDay(event) {
         this.setState({
-            data: data.dataDay
+            data: getDataDay()
         });
     };
 
