@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import Chart from "react-google-charts";
 import './index.css';
 import { data } from './modules/data.js';
+import './dataApi';
+import { getDataYear } from './dataApi';
 
 class App extends React.Component {
 
@@ -19,11 +21,9 @@ class App extends React.Component {
     }
 
     changeDataChartYear(event) {
-        {
-            this.setState({
-                data: data.dataYear
-            });
-        }
+        this.setState({
+            data: getDataYear()
+        });
     };
 
     changeDataChartMonth(event) {
