@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Chart from "react-google-charts";
 import './index.css';
+import data from './modules/data.json';
 
 class App extends React.Component {
 
@@ -25,16 +26,18 @@ class App extends React.Component {
     }
 
     changeDataChartYear(event) {
-        this.setState({
-            data: [
-                ["Year", "Килограмм", { role: "style" }],
-                ["2019", 50, "stroke-color: black; stroke-width: 1; fill-color: #C5A5CF; fill-opacity: 0.5"],
-                ["2018", 60, "stroke-color: black; stroke-width: 1; fill-color: #76A7FA; fill-opacity: 0.5"],
-                ["2017", 16, "stroke-color: black; stroke-width: 1; fill-color: rgb(231, 231, 109); fill-opacity: 0.5"],
-                ["2016", 22, "stroke-color: black; stroke-width: 1; fill-color: #C5A5CF; fill-opacity: 0.5"],
-                ["2015", 28, "stroke-color: black; stroke-width: 1; fill-color: #BC5679; fill-opacity: 0.5"]
-            ]
-        });
+        {
+            this.setState({
+                data: [
+                    ["Year", "Килограмм", { role: "style" }],
+                    ["2019", 50, "stroke-color: black; stroke-width: 1; fill-color: #C5A5CF; fill-opacity: 0.5"],
+                    ["2018", 60, "stroke-color: black; stroke-width: 1; fill-color: #76A7FA; fill-opacity: 0.5"],
+                    ["2017", 16, "stroke-color: black; stroke-width: 1; fill-color: rgb(231, 231, 109); fill-opacity: 0.5"],
+                    ["2016", 22, "stroke-color: black; stroke-width: 1; fill-color: #C5A5CF; fill-opacity: 0.5"],
+                    ["2015", 28, "stroke-color: black; stroke-width: 1; fill-color: #BC5679; fill-opacity: 0.5"]
+                ]
+            });
+        }
     };
 
     changeDataChartMonth(event) {
