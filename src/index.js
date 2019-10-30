@@ -67,7 +67,7 @@ class App extends React.Component {
         return (
             <div>
                 <div className='title'>
-                    <span>Самые часто используемые ингредиенты в пицце (по Москве)</span>
+                    <span>Самые часто используемые ингредиенты пиццы в Москве</span>
                 </div>
                 <div className="App">
                     <Chart chartType="BarChart" width="100%" height="400px" data={this.state.data} />
