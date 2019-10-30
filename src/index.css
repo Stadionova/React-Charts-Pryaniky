@@ -9,13 +9,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-.title {
+.header__title {
   margin: 0 auto;
   width: 300px;
   margin-top: 50px;
 }
 
-.buttons {
+.main__buttons {
   display: flex;
   justify-content: space-between;
   width: 300px;
