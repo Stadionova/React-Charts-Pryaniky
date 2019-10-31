@@ -81,13 +81,19 @@ class App extends React.Component {
                     </div>
                     <div className="main__inputs">
                         <div>
+                            <input type="button" value="Pie Chart" name='PieChart' onClick={this.changeChart.bind(this)} />
+                        </div>
+                        <div>
                             <input type="button" value="Bar Chart" name='BarChart' onClick={this.changeChart.bind(this)} />
                         </div>
                         <div>
-                            <input type="button" value="Column Chart" name='ColumnChart' onClick={this.changeChart.bind(this)} />
+                            <input type="button" value="Line Chart" name='LineChart' onClick={this.changeChart.bind(this)} />
                         </div>
                         <div>
-                            <input type="button" value="Histogram Chart" name='Histogram' onClick={this.changeChart.bind(this)} />
+                            <input type="button" value="Area Chart" name='AreaChart' onClick={this.changeChart.bind(this)} />
+                        </div>
+                        <div>
+                            <input type="button" value="Column Chart" name='ColumnChart' onClick={this.changeChart.bind(this)} />
                         </div>
                     </div>
                 </div>
