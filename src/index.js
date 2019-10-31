@@ -41,10 +41,10 @@ class App extends React.Component {
         });
     };
 
-    changeChart() {
+    changeChart(event) {
         this.setState({
-            chartType: 'ColumnChart'
-        })
+            chartType: event.currentTarget.name
+        });
     }
 
     render() {
@@ -74,9 +74,9 @@ class App extends React.Component {
                         </div>
                         <div>
                             <ul>
-                                <button><li onClick={this.changeChart.bind(this)}>1-ый вид графика</li></button>
-                                <button><li onClick={this.changeChart.bind(this)}>2-ой вид графика</li></button>
-                                <button><li onClick={this.changeChart.bind(this)}>3-ий вид графика</li></button>
+                                <input type="button" value="Bar Chart" name='BarChart' onClick={this.changeChart.bind(this)} />
+                                <input type="button" value="Column Chart" name='ColumnChart' onClick={this.changeChart.bind(this)} />
+                                <input type="button" value="Histogram Chart" name='Histogram' onClick={this.changeChart.bind(this)} />
                             </ul>
                         </div>
                     </div>
