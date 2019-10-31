@@ -49,42 +49,48 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
-                <header className='header'>
-                    <div className='header__title'>
-                        <span>Количество приезжающих в Москву</span>
-                    </div>
-                </header>
-                <main className='main'>
-                    <div className="main__app">
-                        <div>
-                            <Chart chartType={this.state.chartType} width="800px" height="400px" data={this.state.data} />
+            <div className='containerApp'>
+                <div className='container'>
+                    <header className='header'>
+                        <div className='header__title'>
+                            <span>Количество приезжающих в Москву</span>
                         </div>
-                        <div className='main__buttons-periods'>
+                    </header>
+                    <main className='main'>
+                        <div className="main__app">
                             <div>
-                                <button onClick={this.changeDataChartYear.bind(this)}>По годам</button>
+                                <Chart chartType={this.state.chartType} width="900px" height="400px" data={this.state.data} />
                             </div>
-                            <div>
-                                <button onClick={this.changeDataChartMonth.bind(this)}>По месяцам</button>
+                            <div className='main__buttons-periods'>
+                                <div>
+                                    <button onClick={this.changeDataChartYear.bind(this)}>По годам</button>
+                                </div>
+                                <div>
+                                    <button onClick={this.changeDataChartMonth.bind(this)}>По месяцам</button>
+                                </div>
+                                <div>
+                                    <button onClick={this.changeDataChartDay.bind(this)}>По дням</button>
+                                </div>
                             </div>
-                            <div>
-                                <button onClick={this.changeDataChartDay.bind(this)}>По дням</button>
-                            </div>
+                        </div>
+                    </main>
+                </div>
+                <div className='main__buttons-charts'>
+                    <div>
+                        <span>Отобразить данные в виде другого графика</span>
+                    </div>
+                    <div className="main__inputs">
+                        <div>
+                            <input type="button" value="Bar Chart" name='BarChart' onClick={this.changeChart.bind(this)} />
+                        </div>
+                        <div>
+                            <input type="button" value="Column Chart" name='ColumnChart' onClick={this.changeChart.bind(this)} />
+                        </div>
+                        <div>
+                            <input type="button" value="Histogram Chart" name='Histogram' onClick={this.changeChart.bind(this)} />
                         </div>
                     </div>
-                    <div className='main__buttons-charts'>
-                        <div>
-                            <span>Отобразить данные в виде другого графика</span>
-                        </div>
-                        <div>
-                            <ul>
-                                <input type="button" value="Bar Chart" name='BarChart' onClick={this.changeChart.bind(this)} />
-                                <input type="button" value="Column Chart" name='ColumnChart' onClick={this.changeChart.bind(this)} />
-                                <input type="button" value="Histogram Chart" name='Histogram' onClick={this.changeChart.bind(this)} />
-                            </ul>
-                        </div>
-                    </div>
-                </main>
+                </div>
             </div>
         );
     }

@@ -9,7 +9,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-.main__app {
+.containerApp {
+  width: 1250px;
+}
+
+.container {
+  /* width: 800px; */
   position: absolute;
 }
 
@@ -17,6 +22,7 @@ code {
   margin: 0 auto;
   width: 300px;
   margin-top: 50px;
+  text-align: center;
 }
 
 .main__buttons-periods {
@@ -27,7 +33,7 @@ code {
   position: relative;
 }
 
-.main__buttons-periods button {
+button {
   display: flex;
   float: left;
   padding: 8px;
@@ -45,41 +51,43 @@ code {
   opacity: 0.9;
 }
 
-.main__buttons-periods button:hover {
+button:hover {
   background-color: rgb(142, 182, 252);
   transition: 0.3s;
   border: 1px solid rgb(98, 132, 190) transparent;
 }
 
 .main__buttons-charts {
-  position: relative;
   float: right;
-  display: flex;
-  justify-content: space-between;
-  width: 300px;
-  margin: 0 auto;
+  margin-top: 50px;
 }
 
-.main__buttons-charts button {
-  display: flex;
-  float: left;
-  padding: 8px;
+.main__inputs {
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 200px;
+}
+
+.main__inputs div {
+  text-align: center;
+}
+
+input {
+  padding: 6px;
   padding-left: 10px;
   padding-right: 10px;
-  text-align: center;
-  margin-top: 30px;
+  margin-top: 10px;
   border-radius: 3px;
-  color: black;
   font-size: 11pt;
-  vertical-align: middle;
-  background-color: #b196b9;
+  background-color: rgb(231, 231, 109);
   border: none;
   outline: none;
-  opacity: 0.9;
+  opacity: 0.89;
 }
 
-.main__buttons-charts button:hover {
+input:hover {
   background-color: rgb(142, 182, 252);
   transition: 0.3s;
   border: 1px solid rgb(98, 132, 190) transparent;
 }
+
