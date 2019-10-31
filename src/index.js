@@ -57,18 +57,22 @@ class App extends React.Component {
                 </header>
                 <main className='main'>
                     <div className="main__app">
-                        <Chart chartType={this.state.chartType} width="100%" height="400px" data={this.state.data} />
+                        <div>
+                            <Chart chartType={this.state.chartType} width="800px" height="400px" data={this.state.data} />
+                        </div>
+                        <div className='main__buttons-periods'>
+                            <div>
+                                <button onClick={this.changeDataChartYear.bind(this)}>По годам</button>
+                            </div>
+                            <div>
+                                <button onClick={this.changeDataChartMonth.bind(this)}>По месяцам</button>
+                            </div>
+                            <div>
+                                <button onClick={this.changeDataChartDay.bind(this)}>По дням</button>
+                            </div>
+                        </div>
                     </div>
-                    <div className='main__buttons'>
-                        <div>
-                            <button onClick={this.changeDataChartYear.bind(this)}>По годам</button>
-                        </div>
-                        <div>
-                            <button onClick={this.changeDataChartMonth.bind(this)}>По месяцам</button>
-                        </div>
-                        <div>
-                            <button onClick={this.changeDataChartDay.bind(this)}>По дням</button>
-                        </div>
+                    <div className='main__buttons-charts'>
                         <div>
                             <span>Отобразить данные в виде другого графика</span>
                         </div>

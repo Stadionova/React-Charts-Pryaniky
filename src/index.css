@@ -9,20 +9,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+.main__app {
+  position: absolute;
+}
+
 .header__title {
   margin: 0 auto;
   width: 300px;
   margin-top: 50px;
 }
 
-.main__buttons {
+.main__buttons-periods {
   display: flex;
   justify-content: space-between;
   width: 300px;
   margin: 0 auto;
+  position: relative;
 }
 
-button {
+.main__buttons-periods button {
   display: flex;
   float: left;
   padding: 8px;
@@ -40,7 +45,40 @@ button {
   opacity: 0.9;
 }
 
-button:hover {
+.main__buttons-periods button:hover {
+  background-color: rgb(142, 182, 252);
+  transition: 0.3s;
+  border: 1px solid rgb(98, 132, 190) transparent;
+}
+
+.main__buttons-charts {
+  position: relative;
+  float: right;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.main__buttons-charts button {
+  display: flex;
+  float: left;
+  padding: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  margin-top: 30px;
+  border-radius: 3px;
+  color: black;
+  font-size: 11pt;
+  vertical-align: middle;
+  background-color: #b196b9;
+  border: none;
+  outline: none;
+  opacity: 0.9;
+}
+
+.main__buttons-charts button:hover {
   background-color: rgb(142, 182, 252);
   transition: 0.3s;
   border: 1px solid rgb(98, 132, 190) transparent;
