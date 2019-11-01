@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import Chart from "../Chart/Chart";
 import { data } from '../../modules/data.js';
-import { getDataYear, getDataMonth, getDataDay } from '../../dataApi';
+// import { getDataYear, getDataMonth, getDataDay } from '../../dataApi';
+import ChartPeriods from '../ChartPeriods/ChartPeriods';
 
 class App extends React.Component {
 
@@ -14,26 +15,13 @@ class App extends React.Component {
             data: data.dataYear
         };
 
-        this.changeDataChartYear = this.changeDataChartYear.bind(this);
-        this.changeDataChartMonth = this.changeDataChartMonth.bind(this);
-        this.changeDataChartDay = this.changeDataChartDay.bind(this);
+        this.changeDataPeriod = this.changeDataPeriod.bind(this);
+
     }
 
-    changeDataChartYear(event) {
+    changeDataPeriod(data) {
         this.setState({
-            data: getDataYear()
-        });
-    };
-
-    changeDataChartMonth(event) {
-        this.setState({
-            data: getDataMonth()
-        });
-    };
-
-    changeDataChartDay(event) {
-        this.setState({
-            data: getDataDay()
+            data: data
         });
     };
 
@@ -51,7 +39,8 @@ class App extends React.Component {
                             <div>
                                 <Chart data={this.state.data} />
                             </div>
-                            <div className='main__buttons-periods'>
+                            <ChartPeriods data={this.state.data} onChangeDataPeriod={this.changeDataPeriod} />
+                            {/* <div className='main__buttons-periods'>
                                 <div>
                                     <button onClick={this.changeDataChartYear.bind(this)}>По годам</button>
                                 </div>
@@ -61,7 +50,7 @@ class App extends React.Component {
                                 <div>
                                     <button onClick={this.changeDataChartDay.bind(this)}>По дням</button>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </main>
                 </div>
