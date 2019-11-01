@@ -30,6 +30,7 @@ code {
   width: 300px;
   margin: 0 auto;
   position: relative;
+  top: 400px;
 }
 
 button {

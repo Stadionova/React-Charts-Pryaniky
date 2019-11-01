@@ -1,0 +1,14 @@
+.container {
+  width: 1200px;
+}
+
+.container__chart {
+  width: 800px;
+  position: absolute;
+}
+
+.container__chartTypes {
+  width: 500px;
+  position: relative;
+  float: right;
+}
