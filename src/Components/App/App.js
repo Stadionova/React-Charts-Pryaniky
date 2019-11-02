@@ -15,8 +15,6 @@ class App extends React.Component {
             data: data.dataYear
         };
 
-        this.changeDataPeriod = this.changeDataPeriod.bind(this);
-
     }
 
     changeDataPeriod(data) {
@@ -30,7 +28,7 @@ class App extends React.Component {
             <div>
                 <Header />
                 <Chart data={this.state.data} />
-                <ChartPeriods data={this.state.data} onChangeDataPeriod={this.changeDataPeriod} />
+                <ChartPeriods data={this.state.data} onChangeDataPeriod={this.changeDataPeriod.bind(this)} />
             </div>
         );
     }

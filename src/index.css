@@ -17,13 +17,6 @@ code {
   position: absolute;
 }
 
-.header__title {
-  margin: 0 auto;
-  width: 300px;
-  margin-top: 50px;
-  text-align: center;
-}
-
 .main__buttons-periods {
   display: flex;
   justify-content: space-between;

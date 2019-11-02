@@ -3,9 +3,9 @@ import './Header.css';
 
 const Header = () => {
     return (
-        <header className='header'>
+        <header>
             <div className='header__title'>
-                <span>Количество приезжающих в Москву</span>
+                <span>Количество приезжающих в Москву, тыс.</span>
             </div>
         </header>
     )

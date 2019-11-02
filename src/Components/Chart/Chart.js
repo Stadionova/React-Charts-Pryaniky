@@ -13,8 +13,6 @@ class Chart extends React.Component {
             chartType: 'BarChart'
         };
 
-        this.changeChart = this.changeChart.bind(this);
-
     }
 
     changeChart(chartType) {
@@ -27,21 +25,12 @@ class Chart extends React.Component {
         return (
             <div className="container">
                 <div className="container__chart">
-                    <GoogleChart options={{
-                        title: 'Population of Largest U.S. Cities',
-                        chartArea: { width: '50%' },
-                        hAxis: {
-                            title: 'Total Population',
-                            minValue: 0,
-                        },
-                        vAxis: {
-                            title: 'City',
-                        },
-                        legend: { position: 'none' },
-                    }} chartType={this.state.chartType} width="1000px" height="400px" data={this.props.data} />
+                    <GoogleChart
+                        options={{ chartArea: { width: '50%' }, legend: { position: 'none' }, }}
+                        chartType={this.state.chartType} width="1000px" height="400px" data={this.props.data} />
                 </div>
                 <div className="container__chartTypes">
-                    <ChartTypes chartType={this.state.chartType} onChangeChart={this.changeChart} />
+                    <ChartTypes chartType={this.state.chartType} onChangeChart={this.changeChart.bind(this)} />
                 </div>
             </div>
         );
