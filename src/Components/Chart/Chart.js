@@ -22,11 +22,18 @@ class Chart extends React.Component {
     }
 
     render() {
+
+        if (this.state.chartType == 'PieChart') {
+            var position = 'bottom';
+        } else {
+            var position = 'none';
+        }
+
         return (
             <div className="container">
                 <div className="container__chart">
                     <GoogleChart
-                        options={{ chartArea: { width: '50%' }, legend: { position: 'none' }, }}
+                        options={{ chartArea: { width: '50%' }, legend: { position: position } }}
                         chartType={this.state.chartType} width="1000px" height="400px" data={this.props.data} />
                 </div>
                 <div className="container__chartTypes">
