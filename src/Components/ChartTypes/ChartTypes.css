@@ -1,0 +1,33 @@
+.titleTypes {
+  float: right;
+  margin-top: 50px;
+}
+
+.inputsTypes {
+  margin: 0 auto;
+  margin-top: 70px;
+  width: 200px;
+}
+
+.inputsTypes div {
+  text-align: center;
+}
+
+input {
+  padding: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
+  border-radius: 3px;
+  font-size: 11pt;
+  background-color: rgb(231, 231, 109);
+  border: none;
+  outline: none;
+  opacity: 0.89;
+}
+
+input:hover {
+  background-color: rgb(142, 182, 252);
+  transition: 0.3s;
+  border: 1px solid rgb(98, 132, 190) transparent;
+}

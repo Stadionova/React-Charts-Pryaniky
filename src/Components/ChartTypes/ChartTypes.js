@@ -1,4 +1,5 @@
 import React from 'react';
+import './ChartTypes.css';
 
 class ChartTypes extends React.Component {
 
@@ -15,11 +16,11 @@ class ChartTypes extends React.Component {
 
     render() {
         return (
-            <div className='main__buttons-charts'>
+            <div className='titleTypes'>
                 <div>
                     <span>Отобразить данные в виде другого графика</span>
                 </div>
-                <div className="main__inputs">
+                <div className="inputsTypes">
                     <div>
                         <input type="button" value="Pie Chart" name='PieChart' onClick={this.changeChartType.bind(this)} />
                     </div>
