@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Chart from "../Chart/Chart";
+import Header from "../Header/Header";
 import { data } from '../../modules/data.js';
 import ChartPeriods from '../ChartPeriods/ChartPeriods';
 
@@ -26,24 +27,10 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className='containerApp'>
-                <div className='container'>
-                    <header className='header'>
-                        <div className='header__title'>
-                            <span>Количество приезжающих в Москву</span>
-                        </div>
-                    </header>
-                    <main className='main'>
-                        <div className="main__app">
-                            <div>
-                                <Chart data={this.state.data} />
-                            </div>
-                            <div>
-                                <ChartPeriods data={this.state.data} onChangeDataPeriod={this.changeDataPeriod} />
-                            </div>
-                        </div>
-                    </main>
-                </div>
+            <div>
+                <Header />
+                <Chart data={this.state.data} />
+                <ChartPeriods data={this.state.data} onChangeDataPeriod={this.changeDataPeriod} />
             </div>
         );
     }
