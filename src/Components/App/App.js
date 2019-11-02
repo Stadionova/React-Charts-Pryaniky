@@ -25,7 +25,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='appWrap'>
                 <Header />
                 <Chart data={this.state.data} />
                 <ChartPeriods data={this.state.data} onChangeDataPeriod={this.changeDataPeriod.bind(this)} />
