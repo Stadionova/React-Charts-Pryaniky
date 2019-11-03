@@ -3,12 +3,6 @@ import './ChartTypes.css';
 
 class ChartTypes extends React.Component {
 
-    constructor() {
-
-        super();
-
-    }
-
     changeChartType(event) {
         const chartType = event.currentTarget.name;
         this.props.onChangeChart(chartType);

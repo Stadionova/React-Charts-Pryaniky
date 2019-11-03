@@ -7,14 +7,8 @@ import ChartPeriods from '../ChartPeriods/ChartPeriods';
 
 class App extends React.Component {
 
-    constructor() {
-
-        super();
-
-        this.state = {
-            data: data.dataYear
-        };
-
+    state = {
+        data: data.dataYear
     }
 
     changeDataPeriod(data) {

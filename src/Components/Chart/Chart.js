@@ -5,14 +5,8 @@ import './Chart.css';
 
 class Chart extends React.Component {
 
-    constructor() {
-
-        super();
-
-        this.state = {
-            chartType: 'BarChart'
-        };
-
+    state = {
+        chartType: 'BarChart'
     }
 
     changeChart(chartType) {

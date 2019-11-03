@@ -4,12 +4,6 @@ import './ChartPeriods.css';
 
 class ChartPeriods extends React.Component {
 
-    constructor() {
-
-        super();
-
-    }
-
     pushNewPeriodYear(event) {
         const data = getDataYear();
         this.props.onChangeDataPeriod(data);
