@@ -11,21 +11,22 @@ class App extends React.Component {
         data: data.dataYear
     }
 
-    changeDataPeriod(data) {
-        this.setState({
-            data: data
-        });
-    };
-
     render() {
         return (
             <div className='appWrap'>
                 <Header />
                 <Chart data={this.state.data} />
-                <ChartPeriods data={this.state.data} onChangeDataPeriod={this.changeDataPeriod.bind(this)} />
+                <ChartPeriods data={this.state.data} onChangeDataPeriod={this.changeDataPeriod} />
             </div>
         );
     }
+
+    changeDataPeriod = (data) => {
+        this.setState({
+            data: data
+        });
+    };
+
 }
 
 export default App;

@@ -9,12 +9,6 @@ class Chart extends React.Component {
         chartType: 'BarChart'
     }
 
-    changeChart(chartType) {
-        this.setState({
-            chartType: chartType
-        });
-    }
-
     render() {
 
         if (this.state.chartType == 'PieChart') {
@@ -31,11 +25,18 @@ class Chart extends React.Component {
                         chartType={this.state.chartType} width="1000px" height="400px" data={this.props.data} />
                 </div>
                 <div className="container__chartTypes">
-                    <ChartTypes chartType={this.state.chartType} onChangeChart={this.changeChart.bind(this)} />
+                    <ChartTypes chartType={this.state.chartType} onChangeChart={this.changeChart} />
                 </div>
             </div>
         );
     }
+
+    changeChart = (chartType) => {
+        this.setState({
+            chartType: chartType
+        });
+    }
+
 }
 
 export default Chart;
