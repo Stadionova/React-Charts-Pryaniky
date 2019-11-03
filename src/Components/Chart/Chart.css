@@ -1,5 +1,3 @@
-.container__chartTypes {
-  width: 300px;
-  position: relative;
-  float: right;
+.container__chart {
+  margin-left: 160px;
 }

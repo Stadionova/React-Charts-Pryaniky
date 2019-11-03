@@ -1,6 +1,5 @@
 .titleTypes {
-  float: right;
-  margin-top: 70px;
+  float: left;
 }
 
 .inputsTypes {
@@ -24,6 +23,7 @@ input {
   border: none;
   outline: none;
   opacity: 0.89;
+  width: 110px;
 }
 
 input:hover {

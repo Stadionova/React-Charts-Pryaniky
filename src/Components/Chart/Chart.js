@@ -1,7 +1,7 @@
 import React from 'react';
 import GoogleChart from "react-google-charts";
-import ChartTypes from '../ChartTypes/ChartTypes';
 import './Chart.css';
+import ChartTypes from '../ChartTypes/ChartTypes';
 
 class Chart extends React.Component {
 
@@ -19,14 +19,14 @@ class Chart extends React.Component {
 
         return (
             <div className="container">
+                <div className="container__chartTypes">
+                    <ChartTypes chartType={this.state.chartType} onChangeChart={this.changeChart} />
+                </div>
                 <div className="container__chart">
                     <GoogleChart
-                        options={{ chartArea: { width: '50%' }, legend: { position: position } }}
-                        chartType={this.state.chartType} width="800px" height="300px" data={this.props.data} />
+                        options={{ chartArea: { width: '100%' }, legend: { position: position } }}
+                        chartType={this.state.chartType} width="90%" height="200px" data={this.props.data} />
                 </div>
-                {/* <div className="container__chartTypes">
-                    <ChartTypes chartType={this.state.chartType} onChangeChart={this.changeChart} />
-                </div> */}
             </div>
         );
     }

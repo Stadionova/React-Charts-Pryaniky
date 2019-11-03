@@ -1,29 +1,31 @@
 .wrapper {
   display: grid;
   text-align: center;
-  grid-gap: 5px;
-  width: 100%;
   margin: 0 auto;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 90px);
+  grid-template-rows: repeat(8, 80px);
 }
 
 .item1 {
   grid-column: 1 / 4;
   grid-row: 1 / 4;
+  margin: 0 auto;
 }
 
 .item2 {
   grid-column: 5 / 8;
   grid-row: 1 / 4;
+  margin: 0 auto;
 }
 
 .item3 {
   grid-column: 1 / 4;
   grid-row: 5 / 8;
+  margin: 0 auto;
 }
 
 .item4 {
   grid-column: 5 / 8;
   grid-row: 5 / 8;
+  margin: 0 auto;
 }
