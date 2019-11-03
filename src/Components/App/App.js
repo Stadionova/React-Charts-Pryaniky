@@ -14,16 +14,15 @@ class App extends React.Component {
     render() {
         return (
             <div className='appWrap'>
-                <Header />
+                <div className='headerComponents'>
+                    <Header />
+                    <ChartPeriods data={this.state.data} onChangeDataPeriod={this.changeDataPeriod} />
+                </div>
                 <div class="wrapper">
-                    <div class="item1"><Chart data={this.state.data} />
-                        <ChartPeriods data={this.state.data} onChangeDataPeriod={this.changeDataPeriod} /></div>
-                    <div class="item2"><Chart data={this.state.data} />
-                        <ChartPeriods data={this.state.data} onChangeDataPeriod={this.changeDataPeriod} /></div>
-                    <div class="item3"><Chart data={this.state.data} />
-                        <ChartPeriods data={this.state.data} onChangeDataPeriod={this.changeDataPeriod} /></div>
-                    <div class="item4"><Chart data={this.state.data} />
-                        <ChartPeriods data={this.state.data} onChangeDataPeriod={this.changeDataPeriod} /></div>
+                    <div class="item1"><Chart data={this.state.data} /></div>
+                    <div class="item2"><Chart data={this.state.data} /></div>
+                    <div class="item3"><Chart data={this.state.data} /></div>
+                    <div class="item4"><Chart data={this.state.data} /></div>
                 </div>
             </div>
         );
