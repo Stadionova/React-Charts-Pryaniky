@@ -22,11 +22,11 @@ class Chart extends React.Component {
                 <div className="container__chart">
                     <GoogleChart
                         options={{ chartArea: { width: '50%' }, legend: { position: position } }}
-                        chartType={this.state.chartType} width="1000px" height="400px" data={this.props.data} />
+                        chartType={this.state.chartType} width="800px" height="300px" data={this.props.data} />
                 </div>
-                <div className="container__chartTypes">
+                {/* <div className="container__chartTypes">
                     <ChartTypes chartType={this.state.chartType} onChangeChart={this.changeChart} />
-                </div>
+                </div> */}
             </div>
         );
     }
