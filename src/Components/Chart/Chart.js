@@ -25,7 +25,7 @@ class Chart extends React.Component {
                 <div className="container__chart">
                     <GoogleChart
                         options={{ chartArea: { width: '100%' }, legend: { position: position } }}
-                        chartType={this.state.chartType} width="90%" height="200px" data={this.props.data} />
+                        chartType={this.state.chartType} width="400px" height="200px" data={this.props.data} />
                 </div>
             </div>
         );
