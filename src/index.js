@@ -10,9 +10,9 @@ const initialState = {
     data: getDataYear()
 }
 
-function todoApp(state = initialState, action) {
+function changeChartByPeriod(state = initialState, action) {
     console.log(action);
-    if (action.type === 'ADD_TRACK') {
+    if (action.type === 'changePeriod') {
         return {
             ...state,
             data: action.payload,
@@ -21,7 +21,7 @@ function todoApp(state = initialState, action) {
     return state;
 }
 
-const store = createStore(todoApp);
+const store = createStore(changeChartByPeriod);
 
 ReactDOM.render(
     <Provider store={store}>

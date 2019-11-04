@@ -17,7 +17,7 @@ class App extends React.Component {
             <div className='appWrap'>
                 <div className='headerComponents'>
                     <Header />
-                    <ChartPeriods data={this.props.data} onChangeDataPeriod={this.changeDataPeriod} />
+                    <ChartPeriods />
                 </div>
                 <div class="wrapper">
                     <div class="item1"><Chart data={this.props.data} /></div>
@@ -28,20 +28,10 @@ class App extends React.Component {
             </div>
         );
     }
-
-    changeDataPeriod = (data) => {
-        this.setState({
-            data: data
-        });
-    };
-
 }
 
 export default connect(
     state => ({
         data: state.data
-    }),
-    dispatch => ({
-        // addTrack: (trackName) => dispatch({ type: "ADD_TRACK", payload: trackName })
     })
 )(App);

@@ -3,39 +3,36 @@ import { getDataYear, getDataMonth, getDataDay } from '../../dataApi';
 import './ChartPeriods.css';
 import { connect } from 'react-redux';
 
-class ChartPeriods extends React.Component {
+const ChartPeriods = (props) => {
 
-    render() {
-        return (
-            <div className='buttonsPeriods'>
-                <div>
-                    <button onClick={this.pushNewPeriodYear}>По годам</button>
-                </div>
-                <div>
-                    <button onClick={this.pushNewPeriodMonth}>По месяцам</button>
-                </div>
-                <div>
-                    <button onClick={this.pushNewPeriodDay}>По дням</button>
-                </div>
-            </div>
-        )
-    }
-
-    pushNewPeriodYear = (event) => {
+    function pushNewPeriodYear(event) {
         const data = getDataYear();
-        this.props.addTrack(data);
+        props.showDataByPeriod(data);
     };
 
-    pushNewPeriodMonth = (event) => {
+    function pushNewPeriodMonth(event) {
         const data = getDataMonth();
-        this.props.addTrack(data);
+        props.showDataByPeriod(data);
     };
 
-    pushNewPeriodDay = (event) => {
+    function pushNewPeriodDay(event) {
         const data = getDataDay();
-        this.props.addTrack(data);
+        props.showDataByPeriod(data);
     };
 
+    return (
+        <div className='buttonsPeriods'>
+            <div>
+                <button onClick={pushNewPeriodYear}>По годам</button>
+            </div>
+            <div>
+                <button onClick={pushNewPeriodMonth}>По месяцам</button>
+            </div>
+            <div>
+                <button onClick={pushNewPeriodDay}>По дням</button>
+            </div>
+        </div>
+    )
 }
 
 export default connect(
@@ -43,6 +40,6 @@ export default connect(
         data: state.data
     }),
     dispatch => ({
-        addTrack: (data) => dispatch({ type: "ADD_TRACK", payload: data })
+        showDataByPeriod: (data) => dispatch({ type: "changePeriod", payload: data })
     })
 )(ChartPeriods);
