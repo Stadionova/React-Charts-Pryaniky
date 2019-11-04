@@ -1,37 +1,34 @@
 import React from 'react';
 import './ChartTypes.css';
 
-class ChartTypes extends React.Component {
+const ChartTypes = (props) => {
 
-    render() {
-        return (
-            <div className='titleTypes'>
-                <div className="inputsTypes">
-                    <div>
-                        <input type="button" value="Pie Chart" name='PieChart' onClick={this.changeChartType} />
-                    </div>
-                    <div>
-                        <input type="button" value="Bar Chart" name='BarChart' onClick={this.changeChartType} />
-                    </div>
-                    <div>
-                        <input type="button" value="Line Chart" name='LineChart' onClick={this.changeChartType} />
-                    </div>
-                    <div>
-                        <input type="button" value="Area Chart" name='AreaChart' onClick={this.changeChartType} />
-                    </div>
-                    <div>
-                        <input type="button" value="Column Chart" name='ColumnChart' onClick={this.changeChartType} />
-                    </div>
-                </div>
-            </div>
-        )
-    }
-
-    changeChartType = (event) => {
+    function changeChartType(event) {
         const chartType = event.currentTarget.name;
-        this.props.onChangeChart(chartType);
+        props.onChangeChart(chartType);
     };
 
+    return (
+        <div className='titleTypes'>
+            <div className="inputsTypes">
+                <div>
+                    <input type="button" value="Pie Chart" name='PieChart' onClick={changeChartType} />
+                </div>
+                <div>
+                    <input type="button" value="Bar Chart" name='BarChart' onClick={changeChartType} />
+                </div>
+                <div>
+                    <input type="button" value="Line Chart" name='LineChart' onClick={changeChartType} />
+                </div>
+                <div>
+                    <input type="button" value="Area Chart" name='AreaChart' onClick={changeChartType} />
+                </div>
+                <div>
+                    <input type="button" value="Column Chart" name='ColumnChart' onClick={changeChartType} />
+                </div>
+            </div>
+        </div>
+    )
 }
 
 export default ChartTypes;
