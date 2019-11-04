@@ -6,9 +6,6 @@ class ChartTypes extends React.Component {
     render() {
         return (
             <div className='titleTypes'>
-                {/* <div>
-                    <span>Отобразить данные в виде другого графика</span>
-                </div> */}
                 <div className="inputsTypes">
                     <div>
                         <input type="button" value="Pie Chart" name='PieChart' onClick={this.changeChartType} />
