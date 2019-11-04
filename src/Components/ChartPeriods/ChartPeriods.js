@@ -1,6 +1,7 @@
 import React from 'react';
 import { getDataYear, getDataMonth, getDataDay } from '../../dataApi';
 import './ChartPeriods.css';
+import { connect } from 'react-redux';
 
 class ChartPeriods extends React.Component {
 
@@ -22,19 +23,26 @@ class ChartPeriods extends React.Component {
 
     pushNewPeriodYear = (event) => {
         const data = getDataYear();
-        this.props.onChangeDataPeriod(data);
+        this.props.addTrack(data);
     };
 
     pushNewPeriodMonth = (event) => {
         const data = getDataMonth();
-        this.props.onChangeDataPeriod(data);
+        this.props.addTrack(data);
     };
 
     pushNewPeriodDay = (event) => {
         const data = getDataDay();
-        this.props.onChangeDataPeriod(data);
+        this.props.addTrack(data);
     };
 
 }
 
-export default ChartPeriods;
+export default connect(
+    state => ({
+        data: state.data
+    }),
+    dispatch => ({
+        addTrack: (data) => dispatch({ type: "ADD_TRACK", payload: data })
+    })
+)(ChartPeriods);

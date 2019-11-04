@@ -11,12 +11,13 @@ const initialState = {
 }
 
 function todoApp(state = initialState, action) {
-    // if (action.type === 'ADD_TRACK') {
-    //     return [
-    //         ...state,
-    //         action.payload
-    //     ];
-    // }
+    console.log(action);
+    if (action.type === 'ADD_TRACK') {
+        return {
+            ...state,
+            data: action.payload,
+        };
+    }
     return state;
 }
 
