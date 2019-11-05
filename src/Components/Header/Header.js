@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <header>
             <div className='title'>
-                <span>Количество приезжающих в Москву, тыс.</span>
+                <span>Динамика численности населения Москвы</span>
             </div>
         </header>
     )

@@ -5,17 +5,43 @@ import App from "./Components/App/App";
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { getDataYear } from './dataApi';
+import { getDataAppear } from './appear';
+import { getDataDie } from './die';
+import { getDataYearaway } from './away';
 
 const initialState = {
-    data: getDataYear()
+    data: getDataYear(),
+    appear: getDataAppear(),
+    die: getDataDie(),
+    away: getDataYearaway()
 }
 
 function changeChartByPeriod(state = initialState, action) {
-    console.log(action);
     if (action.type === 'changePeriod') {
         return {
             ...state,
-            data: action.payload,
+            data: action.payload
+        };
+    }
+
+    if (action.type === 'appear') {
+        return {
+            ...state,
+            appear: action.payload
+        };
+    }
+
+    if (action.type === 'die') {
+        return {
+            ...state,
+            die: action.payload
+        };
+    }
+
+    if (action.type === 'away') {
+        return {
+            ...state,
+            away: action.payload
         };
     }
     return state;

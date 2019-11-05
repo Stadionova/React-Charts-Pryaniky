@@ -19,6 +19,7 @@ class Chart extends React.Component {
 
         return (
             <div className="container">
+                <div><span>{this.props.title}</span></div>
                 <div className="container__chartTypes">
                     <ChartTypes chartType={this.state.chartType} onChangeChart={this.changeChart} />
                 </div>

@@ -1,3 +1,7 @@
 .container__chart {
   margin-left: 100px;
 }
+
+.container span {
+  font-size: 10pt;
+}
