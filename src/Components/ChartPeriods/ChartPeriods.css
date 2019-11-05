@@ -4,6 +4,10 @@
   margin-right: 80px;
 }
 
+.buttonsPeriods div {
+  margin-right: 5px;
+}
+
 button {
   padding: 3px;
   padding-left: 5px;
@@ -15,10 +19,6 @@ button {
   background-color: #b196b9;
   outline: none;
   opacity: 0.9;
-}
-
-.buttonsPeriods div {
-  margin-right: 5px;
 }
 
 button:hover {

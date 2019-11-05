@@ -18,12 +18,12 @@ class Chart extends React.Component {
         }
 
         return (
-            <div className="container">
+            <div className="containerChart">
                 <div><span>{this.props.title}</span></div>
-                <div className="container__chartTypes">
+                <div className="containerChart__types">
                     <ChartTypes chartType={this.state.chartType} onChangeChart={this.changeChart} />
                 </div>
-                <div className="container__chart">
+                <div className="containerChart__chart">
                     <GoogleChart
                         options={{ legend: { position: position } }}
                         chartType={this.state.chartType} width="400px" height="200px" data={this.props.data} />

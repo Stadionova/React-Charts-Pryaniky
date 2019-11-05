@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 
 const ChartPeriods = (props) => {
 
-    function pushNewPeriodYear(event) {
+    function pushNewPeriodYear() {
         if (props.type == 'dataCome') {
             const data = getDataComeYear();
             props.showComeData(data);
@@ -27,7 +27,7 @@ const ChartPeriods = (props) => {
         }
     };
 
-    function pushNewPeriodMonth(event) {
+    function pushNewPeriodMonth() {
         if (props.type == 'dataCome') {
             const data = getDataComeMonth();
             props.showComeData(data);
@@ -46,7 +46,7 @@ const ChartPeriods = (props) => {
         }
     };
 
-    function pushNewPeriodDay(event) {
+    function pushNewPeriodDay() {
         if (props.type == 'dataCome') {
             const data = getDataComeDay();
             props.showComeData(data);

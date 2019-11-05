@@ -1,13 +1,13 @@
-.titleTypes {
+.container {
   float: left;
   margin-top: 30px;
 }
 
-.inputsTypes {
+.container__inputs {
   margin: 0 auto;
 }
 
-.inputsTypes div {
+.container__inputs div {
   text-align: center;
 }
 

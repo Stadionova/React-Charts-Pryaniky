@@ -1,11 +1,14 @@
-.container__chart {
-  margin-left: 100px;
-}
-
-.container span {
+.containerChart span {
   font-size: 10pt;
 }
 
-.container__chartTypes {
+.containerChart__types {
   margin-top: 10px;
 }
+
+.containerChart__chart {
+  margin-left: 100px;
+}
+
+
+

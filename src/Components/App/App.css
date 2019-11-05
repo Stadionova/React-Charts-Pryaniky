@@ -1,4 +1,10 @@
-.wrapper {
+.containerApp__header {
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.containerApp__charts {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-template-rows: repeat(2, 260px);
   display: grid;
@@ -7,20 +13,15 @@
 }
 
 @media (max-width: 1000px) {
-  .wrapper {
+  .containerApp__charts {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: repeat(2, 280px);
     width: 500px;
     margin-left: 20px;
   }
 
-  .item3 {
+  .chart-3 {
     margin-bottom: 30px;
   }
 }
 
-.headerComponents {
-  width: 500px;
-  margin: 0 auto;
-  margin-bottom: 30px;
-}

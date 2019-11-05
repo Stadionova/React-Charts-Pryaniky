@@ -17,15 +17,15 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className='appWrap'>
-                <div className='headerComponents'>
+            <div className='containerApp'>
+                <div className='containerApp__header'>
                     <Header />
                 </div>
-                <div class="wrapper">
-                    <div className="item1"><ChartPeriods type="dataCome" /><Chart data={this.props.dataCome} title='Количество приехавших в Москву' /></div>
-                    <div className="item2"><ChartPeriods type="dataLeave" /><Chart data={this.props.dataLeave} title='Количество уехавших из Москвы' /></div>
-                    <div className="item3"><ChartPeriods type="dataBorn" /><Chart data={this.props.dataBorn} title='Количество родившихся в Москве' /></div>
-                    <div className="item4"><ChartPeriods type="dataDie" /><Chart data={this.props.dataDie} title='Количество умерших в Москве' /></div>
+                <div class="containerApp__charts">
+                    <div className="chart-1"><ChartPeriods type="dataCome" /><Chart data={this.props.dataCome} title='Количество приехавших в Москву' /></div>
+                    <div className="chart-2"><ChartPeriods type="dataLeave" /><Chart data={this.props.dataLeave} title='Количество уехавших из Москвы' /></div>
+                    <div className="chart-3"><ChartPeriods type="dataBorn" /><Chart data={this.props.dataBorn} title='Количество родившихся в Москве' /></div>
+                    <div className="chart-"><ChartPeriods type="dataDie" /><Chart data={this.props.dataDie} title='Количество умерших в Москве' /></div>
                 </div>
             </div>
         );

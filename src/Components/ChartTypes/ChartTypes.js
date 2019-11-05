@@ -9,8 +9,8 @@ const ChartTypes = (props) => {
     };
 
     return (
-        <div className='titleTypes'>
-            <div className="inputsTypes">
+        <div className='container'>
+            <div className="container__inputs">
                 <div>
                     <input type="button" value="Pie Chart" name='PieChart' onClick={changeChartType} />
                 </div>
