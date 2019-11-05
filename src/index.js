@@ -7,38 +7,38 @@ import { Provider } from 'react-redux';
 import { getDataYear, getDataAppear, getDataDie, getDataYearaway } from './getFunctionPeriod';
 
 const initialState = {
-    data: getDataYear(),
-    appear: getDataAppear(),
-    die: getDataDie(),
-    away: getDataYearaway()
+    dataCome: getDataYear(),
+    dataBorn: getDataAppear(),
+    dataDie: getDataDie(),
+    dataLeave: getDataYearaway()
 }
 
 function changeChartByPeriod(state = initialState, action) {
-    if (action.type === 'changePeriod') {
+    if (action.type === 'dataCome') {
         return {
             ...state,
-            data: action.payload
+            dataCome: action.payload
         };
     }
 
-    if (action.type === 'appear') {
+    if (action.type === 'dataBorn') {
         return {
             ...state,
-            appear: action.payload
+            dataBorn: action.payload
         };
     }
 
-    if (action.type === 'die') {
+    if (action.type === 'dataDie') {
         return {
             ...state,
-            die: action.payload
+            dataDie: action.payload
         };
     }
 
-    if (action.type === 'away') {
+    if (action.type === 'dataLeave') {
         return {
             ...state,
-            away: action.payload
+            dataLeave: action.payload
         };
     }
     return state;

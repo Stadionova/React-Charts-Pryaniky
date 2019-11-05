@@ -4,18 +4,15 @@ import Chart from "../Chart/Chart";
 import Header from "../Header/Header";
 import ChartPeriods from '../ChartPeriods/ChartPeriods';
 import { getDataYear, getDataAppear, getDataDie, getDataYearaway } from '../../getFunctionPeriod';
-// import { getDataAppear } from '../../appear';
-// import { getDataDie } from '../../die';
-// import { getDataYearaway } from '../../away';
 import { connect } from 'react-redux';
 
 class App extends React.Component {
 
     state = {
-        data: getDataYear(),
-        appear: getDataAppear(),
-        die: getDataDie(),
-        away: getDataYearaway()
+        dataCome: getDataYear(),
+        dataBorn: getDataAppear(),
+        dataDie: getDataDie(),
+        dataLeave: getDataYearaway()
     }
 
     render() {
@@ -25,10 +22,10 @@ class App extends React.Component {
                     <Header />
                 </div>
                 <div class="wrapper">
-                    <div class="item1"><ChartPeriods type="data" /><Chart data={this.props.data} title='Количество приезжающих в Москву, тыс.' /></div>
-                    <div class="item2"><ChartPeriods type="appear" /><Chart data={this.props.appear} title='Количество уезжающих из Москвы, тыс.' /></div>
-                    <div class="item3"><ChartPeriods type="die" /><Chart data={this.props.die} title='Родившиеся в Москве, тыс.' /></div>
-                    <div class="item4"><ChartPeriods type="away" /><Chart data={this.props.away} title='Умершие в Москве , тыс.' /></div>
+                    <div class="item1"><ChartPeriods type="dataCome" /><Chart data={this.props.dataCome} title='Количество приезжающих в Москву, тыс.' /></div>
+                    <div class="item2"><ChartPeriods type="dataLeave" /><Chart data={this.props.dataLeave} title='Количество уезжающих из Москвы, тыс.' /></div>
+                    <div class="item3"><ChartPeriods type="dataBorn" /><Chart data={this.props.dataBorn} title='Родившиеся в Москве, тыс.' /></div>
+                    <div class="item4"><ChartPeriods type="dataDie" /><Chart data={this.props.dataDie} title='Умершие в Москве , тыс.' /></div>
                 </div>
             </div>
         );
@@ -37,9 +34,9 @@ class App extends React.Component {
 
 export default connect(
     state => ({
-        data: state.data,
-        appear: state.appear,
-        die: state.die,
-        away: state.away
+        dataCome: state.dataCome,
+        dataLeave: state.dataLeave,
+        dataBorn: state.dataBorn,
+        dataDie: state.dataDie
     })
 )(App);

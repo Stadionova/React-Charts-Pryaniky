@@ -1,4 +1,4 @@
-export const data = {
+export const dataCome = {
     "dataDay": [
         ["Day", "Тысяч", { role: "style" }],
         ["1", 900, "stroke-color: black; stroke-width: 1; fill-color: #C5A5CF; fill-opacity: 0.5"],

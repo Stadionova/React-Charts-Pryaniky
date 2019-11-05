@@ -1,4 +1,4 @@
-export const die = {
+export const dataDie = {
     "dataDay": [
         ["Day", "Тысяч", { role: "style" }],
         ["1", 20, "stroke-color: black; stroke-width: 1; fill-color: #C5A5CF; fill-opacity: 0.5"],

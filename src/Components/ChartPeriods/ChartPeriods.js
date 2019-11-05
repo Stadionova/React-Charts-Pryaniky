@@ -3,66 +3,63 @@ import {
     getDataYear, getDataMonth, getDataDay, getDataAppear, getDataMonthAppear,
     getDataDayAppear, getDataDie, getDataMonthDie, getDataDayDie, getDataYearaway, getDataMonthaway, getDataDayaway
 } from '../../getFunctionPeriod';
-// import { getDataAppear, getDataMonthAppear, getDataDayAppear } from '../../appear';
-// import { getDataDie, getDataMonthDie, getDataDayDie } from '../../die';
-// import { getDataYearaway, getDataMonthaway, getDataDayaway } from '../../away';
 import './ChartPeriods.css';
 import { connect } from 'react-redux';
 
 const ChartPeriods = (props) => {
 
     function pushNewPeriodYear(event) {
-        if (props.type == 'appear') {
-            const data = getDataYear();
+        if (props.type == 'dataBorn') {
+            const data = getDataAppear();
             props.showDataAppear(data);
         }
-        if (props.type == 'away') {
+        if (props.type == 'dataLeave') {
             const data = getDataYearaway();
             props.showDataAway(data);
         }
-        if (props.type == 'die') {
+        if (props.type == 'dataDie') {
             const data = getDataDie();
             props.showDataDie(data);
         }
-        if (props.type == 'data') {
+        if (props.type == 'dataCome') {
             const data = getDataYear();
             props.showDataByPeriod(data);
         }
     };
 
     function pushNewPeriodMonth(event) {
-        if (props.type == 'appear') {
+        if (props.type == 'dataBorn') {
             const data = getDataMonthAppear();
             props.showDataAppear(data);
         }
-        if (props.type == 'away') {
+        if (props.type == 'dataLeave') {
             const data = getDataMonthaway();
             props.showDataAway(data);
         }
-        if (props.type == 'die') {
+        if (props.type == 'dataDie') {
             const data = getDataMonthDie();
             props.showDataDie(data);
         }
-        if (props.type == 'data') {
+        if (props.type == 'dataCome') {
             const data = getDataMonth();
             props.showDataByPeriod(data);
         }
     };
 
     function pushNewPeriodDay(event) {
-        if (props.type == 'appear') {
+        if (props.type == 'dataBorn') {
             const data = getDataDayAppear();
             props.showDataAppear(data);
         }
-        if (props.type == 'away') {
+        if (props.type == 'dataLeave') {
             const data = getDataDayaway();
             props.showDataAway(data);
         }
-        if (props.type == 'die') {
+        if (props.type == 'dataDie') {
             const data = getDataDayDie();
             props.showDataDie(data);
         }
-        if (props.type == 'data') {
+        if (props.type == 'dataCome') {
             const data = getDataDay();
             props.showDataByPeriod(data);
         }
@@ -85,15 +82,15 @@ const ChartPeriods = (props) => {
 
 export default connect(
     state => ({
-        data: state.data,
-        appear: state.appear,
-        die: state.die,
-        away: state.away
+        dataCome: state.dataCome,
+        dataBorn: state.dataBorn,
+        dataDie: state.dataDie,
+        dataLeave: state.dataLeave
     }),
     dispatch => ({
-        showDataByPeriod: (data) => dispatch({ type: "changePeriod", payload: data }),
-        showDataAppear: (appear) => dispatch({ type: "appear", payload: appear }),
-        showDataDie: (die) => dispatch({ type: "die", payload: die }),
-        showDataAway: (away) => dispatch({ type: "away", payload: away })
+        showDataByPeriod: (dataCome) => dispatch({ type: "dataCome", payload: dataCome }),
+        showDataAppear: (dataBorn) => dispatch({ type: "dataBorn", payload: dataBorn }),
+        showDataDie: (dataDie) => dispatch({ type: "dataDie", payload: dataDie }),
+        showDataAway: (dataLeave) => dispatch({ type: "dataLeave", payload: dataLeave })
     })
 )(ChartPeriods);

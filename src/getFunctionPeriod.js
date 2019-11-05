@@ -1,52 +1,52 @@
-import { data } from './dataApi';
-import { appear } from './appear';
-import { die } from './die';
-import { away } from './away';
+import { dataCome } from './comeApi';
+import { dataBorn } from './bornApi';
+import { dataDie } from './dieApi';
+import { dataLeave } from './leaveApi';
 
 export function getDataYear() {
-    return data.dataYear;
+    return dataCome.dataYear;
 }
 
 export function getDataMonth() {
-    return data.dataMonth;
+    return dataCome.dataMonth;
 }
 
 export function getDataDay() {
-    return data.dataDay;
+    return dataCome.dataDay;
 }
 
 export function getDataAppear() {
-    return appear.dataYear;
+    return dataBorn.dataYear;
 }
 
 export function getDataMonthAppear() {
-    return appear.dataMonth;
+    return dataBorn.dataMonth;
 }
 
 export function getDataDayAppear() {
-    return appear.dataDay;
+    return dataBorn.dataDay;
 }
 
 export function getDataDie() {
-    return die.dataYear;
+    return dataDie.dataYear;
 }
 
 export function getDataMonthDie() {
-    return die.dataMonth;
+    return dataDie.dataMonth;
 }
 
 export function getDataDayDie() {
-    return die.dataDay;
+    return dataDie.dataDay;
 }
 
 export function getDataYearaway() {
-    return away.dataYear;
+    return dataLeave.dataYear;
 }
 
 export function getDataMonthaway() {
-    return away.dataMonth;
+    return dataLeave.dataMonth;
 }
 
 export function getDataDayaway() {
-    return away.dataDay;
+    return dataLeave.dataDay;
 }
