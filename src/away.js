@@ -1,4 +1,4 @@
-const away = {
+export const away = {
     "dataDay": [
         ["Day", "Тысяч", { role: "style" }],
         ["1", 2, "stroke-color: black; stroke-width: 1; fill-color: #C5A5CF; fill-opacity: 0.5"],
@@ -23,16 +23,4 @@ const away = {
         ["2016", 22, "stroke-color: black; stroke-width: 1; fill-color: #C5A5CF; fill-opacity: 0.5"],
         ["2015", 28, "stroke-color: black; stroke-width: 1; fill-color: #BC5679; fill-opacity: 0.5"]
     ]
-}
-
-export function getDataYearaway() {
-    return away.dataYear;
-}
-
-export function getDataMonthaway() {
-    return away.dataMonth;
-}
-
-export function getDataDayaway() {
-    return away.dataDay;
 }

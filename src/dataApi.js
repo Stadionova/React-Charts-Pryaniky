@@ -1,4 +1,4 @@
-const data = {
+export const data = {
     "dataDay": [
         ["Day", "Тысяч", { role: "style" }],
         ["1", 900, "stroke-color: black; stroke-width: 1; fill-color: #C5A5CF; fill-opacity: 0.5"],
@@ -23,16 +23,4 @@ const data = {
         ["2016", 70, "stroke-color: black; stroke-width: 1; fill-color: #C5A5CF; fill-opacity: 0.5"],
         ["2015", 70, "stroke-color: black; stroke-width: 1; fill-color: #BC5679; fill-opacity: 0.5"]
     ]
-}
-
-export function getDataYear() {
-    return data.dataYear;
-}
-
-export function getDataMonth() {
-    return data.dataMonth;
-}
-
-export function getDataDay() {
-    return data.dataDay;
 }

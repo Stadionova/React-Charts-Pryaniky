@@ -3,10 +3,10 @@ import './App.css';
 import Chart from "../Chart/Chart";
 import Header from "../Header/Header";
 import ChartPeriods from '../ChartPeriods/ChartPeriods';
-import { getDataYear } from '../../dataApi';
-import { getDataAppear } from '../../appear';
-import { getDataDie } from '../../die';
-import { getDataYearaway } from '../../away';
+import { getDataYear, getDataAppear, getDataDie, getDataYearaway } from '../../getFunctionPeriod';
+// import { getDataAppear } from '../../appear';
+// import { getDataDie } from '../../die';
+// import { getDataYearaway } from '../../away';
 import { connect } from 'react-redux';
 
 class App extends React.Component {

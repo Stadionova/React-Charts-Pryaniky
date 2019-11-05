@@ -4,10 +4,7 @@ import './index.css';
 import App from "./Components/App/App";
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { getDataYear } from './dataApi';
-import { getDataAppear } from './appear';
-import { getDataDie } from './die';
-import { getDataYearaway } from './away';
+import { getDataYear, getDataAppear, getDataDie, getDataYearaway } from './getFunctionPeriod';
 
 const initialState = {
     data: getDataYear(),

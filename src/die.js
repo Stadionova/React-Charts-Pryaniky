@@ -1,4 +1,4 @@
-const die = {
+export const die = {
     "dataDay": [
         ["Day", "Тысяч", { role: "style" }],
         ["1", 20, "stroke-color: black; stroke-width: 1; fill-color: #C5A5CF; fill-opacity: 0.5"],
@@ -23,16 +23,4 @@ const die = {
         ["2016", 40, "stroke-color: black; stroke-width: 1; fill-color: #C5A5CF; fill-opacity: 0.5"],
         ["2015", 40, "stroke-color: black; stroke-width: 1; fill-color: #BC5679; fill-opacity: 0.5"]
     ]
-}
-
-export function getDataDie() {
-    return die.dataYear;
-}
-
-export function getDataMonthDie() {
-    return die.dataMonth;
-}
-
-export function getDataDayDie() {
-    return die.dataDay;
 }

@@ -1,8 +1,11 @@
 import React from 'react';
-import { getDataYear, getDataMonth, getDataDay } from '../../dataApi';
-import { getDataAppear, getDataMonthAppear, getDataDayAppear } from '../../appear';
-import { getDataDie, getDataMonthDie, getDataDayDie } from '../../die';
-import { getDataYearaway, getDataMonthaway, getDataDayaway } from '../../away';
+import {
+    getDataYear, getDataMonth, getDataDay, getDataAppear, getDataMonthAppear,
+    getDataDayAppear, getDataDie, getDataMonthDie, getDataDayDie, getDataYearaway, getDataMonthaway, getDataDayaway
+} from '../../getFunctionPeriod';
+// import { getDataAppear, getDataMonthAppear, getDataDayAppear } from '../../appear';
+// import { getDataDie, getDataMonthDie, getDataDayDie } from '../../die';
+// import { getDataYearaway, getDataMonthaway, getDataDayaway } from '../../away';
 import './ChartPeriods.css';
 import { connect } from 'react-redux';
 
@@ -10,16 +13,16 @@ const ChartPeriods = (props) => {
 
     function pushNewPeriodYear(event) {
         if (props.type == 'appear') {
-            const appear = getDataYear();
-            props.showDataAppear(appear);
+            const data = getDataYear();
+            props.showDataAppear(data);
         }
         if (props.type == 'away') {
-            const away = getDataYearaway();
-            props.showDataAway(away);
+            const data = getDataYearaway();
+            props.showDataAway(data);
         }
         if (props.type == 'die') {
-            const die = getDataDie();
-            props.showDataDie(die);
+            const data = getDataDie();
+            props.showDataDie(data);
         }
         if (props.type == 'data') {
             const data = getDataYear();
@@ -29,16 +32,16 @@ const ChartPeriods = (props) => {
 
     function pushNewPeriodMonth(event) {
         if (props.type == 'appear') {
-            const appear = getDataMonthAppear();
-            props.showDataAppear(appear);
+            const data = getDataMonthAppear();
+            props.showDataAppear(data);
         }
         if (props.type == 'away') {
-            const away = getDataMonthaway();
-            props.showDataAway(away);
+            const data = getDataMonthaway();
+            props.showDataAway(data);
         }
         if (props.type == 'die') {
-            const die = getDataMonthDie();
-            props.showDataDie(die);
+            const data = getDataMonthDie();
+            props.showDataDie(data);
         }
         if (props.type == 'data') {
             const data = getDataMonth();
@@ -48,16 +51,16 @@ const ChartPeriods = (props) => {
 
     function pushNewPeriodDay(event) {
         if (props.type == 'appear') {
-            const appear = getDataDayAppear();
-            props.showDataAppear(appear);
+            const data = getDataDayAppear();
+            props.showDataAppear(data);
         }
         if (props.type == 'away') {
-            const away = getDataDayaway();
-            props.showDataAway(away);
+            const data = getDataDayaway();
+            props.showDataAway(data);
         }
         if (props.type == 'die') {
-            const die = getDataDayDie();
-            props.showDataDie(die);
+            const data = getDataDayDie();
+            props.showDataDie(data);
         }
         if (props.type == 'data') {
             const data = getDataDay();

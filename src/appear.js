@@ -1,4 +1,4 @@
-const appear = {
+export const appear = {
     "dataDay": [
         ["Day", "Тысяч", { role: "style" }],
         ["1", 300, "stroke-color: black; stroke-width: 1; fill-color: #C5A5CF; fill-opacity: 0.5"],
@@ -23,16 +23,4 @@ const appear = {
         ["2016", 20, "stroke-color: black; stroke-width: 1; fill-color: #C5A5CF; fill-opacity: 0.5"],
         ["2015", 20, "stroke-color: black; stroke-width: 1; fill-color: #BC5679; fill-opacity: 0.5"]
     ]
-}
-
-export function getDataAppear() {
-    return appear.dataYear;
-}
-
-export function getDataMonthAppear() {
-    return appear.dataMonth;
-}
-
-export function getDataDayAppear() {
-    return appear.dataDay;
 }
