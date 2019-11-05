@@ -4,13 +4,13 @@ import './index.css';
 import App from "./Components/App/App";
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { getDataYear, getDataAppear, getDataDie, getDataYearaway } from './getFunctionPeriod';
+import { getDataComeYear, getDataBornYear, getDataDieYear, getDataLeaveYear } from './getFunctionPeriod';
 
 const initialState = {
-    dataCome: getDataYear(),
-    dataBorn: getDataAppear(),
-    dataDie: getDataDie(),
-    dataLeave: getDataYearaway()
+    dataCome: getDataComeYear(),
+    dataBorn: getDataBornYear(),
+    dataDie: getDataDieYear(),
+    dataLeave: getDataLeaveYear()
 }
 
 function changeChartByPeriod(state = initialState, action) {
