@@ -5,3 +5,7 @@
 .container span {
   font-size: 10pt;
 }
+
+.container__chartTypes {
+  margin-top: 10px;
+}

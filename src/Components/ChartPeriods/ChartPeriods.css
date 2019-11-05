@@ -1,7 +1,7 @@
 .buttonsPeriods {
   display: flex;
-  width: 250px;
-  margin: 0 auto;
+  float: right;
+  margin-right: 50px;
 }
 
 button {
