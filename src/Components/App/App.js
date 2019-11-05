@@ -22,10 +22,10 @@ class App extends React.Component {
                     <Header />
                 </div>
                 <div class="wrapper">
-                    <div class="item1"><ChartPeriods type="dataCome" /><Chart data={this.props.dataCome} title='Количество приехавших в Москву' /></div>
-                    <div class="item2"><ChartPeriods type="dataLeave" /><Chart data={this.props.dataLeave} title='Количество уехавших из Москвы' /></div>
-                    <div class="item3"><ChartPeriods type="dataBorn" /><Chart data={this.props.dataBorn} title='Количество родившихся в Москве' /></div>
-                    <div class="item4"><ChartPeriods type="dataDie" /><Chart data={this.props.dataDie} title='Количество умерших в Москве' /></div>
+                    <div className="item1"><ChartPeriods type="dataCome" /><Chart data={this.props.dataCome} title='Количество приехавших в Москву' /></div>
+                    <div className="item2"><ChartPeriods type="dataLeave" /><Chart data={this.props.dataLeave} title='Количество уехавших из Москвы' /></div>
+                    <div className="item3"><ChartPeriods type="dataBorn" /><Chart data={this.props.dataBorn} title='Количество родившихся в Москве' /></div>
+                    <div className="item4"><ChartPeriods type="dataDie" /><Chart data={this.props.dataDie} title='Количество умерших в Москве' /></div>
                 </div>
             </div>
         );

@@ -9,9 +9,13 @@
 @media (max-width: 1000px) {
   .wrapper {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: repeat(2, 200px);
+    grid-template-rows: repeat(2, 280px);
     width: 500px;
     margin-left: 20px;
+  }
+
+  .item3 {
+    margin-bottom: 30px;
   }
 }
 
